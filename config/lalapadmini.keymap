@@ -190,13 +190,15 @@
         TERTIARY_LAYER {
             display-name = "tertiary_layer";
             bindings = <
-&kp EXCLAMATION       &kp AT_SIGN        &kp HASH      &kp DOLLAR  &kp PERCENT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UP_ARROW    &kp LEFT_BRACE  &kp RIGHT_BRACE
-&kp CARET             &kp AMPERSAND      &kp ASTERISK  &kp UP      &kp AT       &kp EXCLAMATION       &kp LEFT               &kp DOWN        &kp RIGHT       &kp BACKSLASH
-&mt LEFT_SHIFT TILDE  &kp DOUBLE_QUOTES  &kp LEFT      &kp DOWN    &kp RIGHT    &kp QUESTION          &mkp MB4               &kp APOSTROPHE  &mkp MB5        &kp RIGHT_SHIFT
-&trans                &trans                           &trans      &trans       &trans                &trans                                 &trans          &trans
+&kp EXCLAMATION  &kp AT_SIGN        &kp HASH      &kp INT_YEN  &kp MINUS  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UP_ARROW    &kp LEFT_BRACE  &kp RIGHT_BRACE
+&kp CARET        &kp AMPERSAND      &kp ASTERISK  &kp UP       &kp AT     &kp EXCLAMATION       &kp LEFT               &kp DOWN        &kp RIGHT       &kp BACKSLASH
+&kp PERCENT      &kp DOUBLE_QUOTES  &kp LEFT      &kp DOWN     &kp RIGHT  &kp QUESTION          &mkp MB4               &kp APOSTROPHE  &mkp MB5        &kp RIGHT_SHIFT
+&trans           &trans                           &trans       &trans     &trans                &trans                                 &trans          &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
+            sensor-bindings =
+                <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>,
+                <&scroll_left_right>;
         };
 
         SYSTEM_LAYER {
@@ -219,6 +221,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4     &none      &mkp MB5   &trans
 &trans  &trans          &trans  &trans  &trans  &trans                  &trans     &trans
             >;
+
+            sensor-bindings = <&volume_up_down>;
         };
 
         SCROLL_R_LAYER {
